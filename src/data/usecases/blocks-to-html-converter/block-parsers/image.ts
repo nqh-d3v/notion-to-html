@@ -19,7 +19,7 @@ export class ImageBlockToHtml implements ToHtml {
 
     return `
 <figure class="image">
-<img src="${imageSource}" alt="${caption}"${style}>
+<img src="${imageSource}" data-notion-img-src="${this._rawSrc}" alt="${caption}"${style}>
 ${caption !== '' ? `<figcaption>${caption}</figcaption>` : ''}
 </figure>
     `;
